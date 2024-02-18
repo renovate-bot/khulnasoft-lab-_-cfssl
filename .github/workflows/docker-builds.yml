@@ -23,8 +23,8 @@ jobs:
             image: ghcr.io/khulnasoft-lab/cfssl
           # docker test publish, todo: switch to service account
           - registry: ""
-            username: gitworkflows
-            password_secret: ${{ secrets.GITHUB_TOKEN }}
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password_secret: ${{ secrets.DOCKERHUB_TOKEN }}
             image: cfssl/cfssl
     steps:
       - name: Checkout repository
