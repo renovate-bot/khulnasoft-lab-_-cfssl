@@ -21,11 +21,6 @@ jobs:
             username: ${{ github.actor }}
             password_secret: GITHUB_TOKEN
             image: ghcr.io/khulnasoft-lab/cfssl
-          # docker test publish, todo: switch to service account
-          - registry: ""
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password_secret: ${{ secrets.DOCKERHUB_TOKEN }}
-            image: cfssl/cfssl
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
