@@ -12,14 +12,14 @@ import (
 	"testing"
 	"time"
 
-	apiinfo "github.com/cloudflare/cfssl/api/info"
-	apisign "github.com/cloudflare/cfssl/api/signhandler"
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/helpers"
-	"github.com/cloudflare/cfssl/helpers/testsuite"
-	"github.com/cloudflare/cfssl/info"
-	"github.com/cloudflare/cfssl/signer"
-	"github.com/cloudflare/cfssl/signer/local"
+	apiinfo "github.com/khulnasoft-lab/cfssl/api/info"
+	apisign "github.com/khulnasoft-lab/cfssl/api/signhandler"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/helpers/testsuite"
+	"github.com/khulnasoft-lab/cfssl/info"
+	"github.com/khulnasoft-lab/cfssl/signer"
+	"github.com/khulnasoft-lab/cfssl/signer/local"
 )
 
 const (
@@ -99,7 +99,7 @@ func TestRemoteMutualTLSInfo(t *testing.T) {
 }
 
 func remoteTLSInfo(t *testing.T, isMutual bool) {
-	t.Skip("expired cert https://github.com/cloudflare/cfssl/issues/1237")
+	t.Skip("expired cert https://github.com/khulnasoft-lab/cfssl/issues/1237")
 	certPool, err := helpers.LoadPEMCertPool(testCaFile)
 	if err != nil {
 		t.Fatal(err)
@@ -160,7 +160,7 @@ func TestRemoteMutualTLSSign(t *testing.T) {
 }
 
 func remoteTLSSign(t *testing.T, isMutual bool) {
-	t.Skip("expired cert https://github.com/cloudflare/cfssl/issues/1237")
+	t.Skip("expired cert https://github.com/khulnasoft-lab/cfssl/issues/1237")
 	certPool, err := helpers.LoadPEMCertPool(testCaFile)
 	if err != nil {
 		t.Fatal(err)
@@ -185,7 +185,7 @@ func remoteTLSSign(t *testing.T, isMutual bool) {
 func verifyRemoteSign(t *testing.T, remoteConfig *config.Config) {
 	s := newRemoteSigner(t, remoteConfig.Signing)
 
-	hosts := []string{"cloudflare.com"}
+	hosts := []string{"khulnasoft.com"}
 	for _, test := range testsuite.CSRTests {
 		csr, err := os.ReadFile(test.File)
 		if err != nil {
@@ -223,7 +223,7 @@ func TestRemoteSignBadServerAndOverride(t *testing.T) {
 	remoteConfig := testsuite.NewConfig(t, []byte(validMinimalRemoteConfig))
 	s := newRemoteSigner(t, remoteConfig.Signing)
 
-	hosts := []string{"cloudflare.com"}
+	hosts := []string{"khulnasoft.com"}
 	csr, err := os.ReadFile("../local/testdata/rsa2048.csr")
 	if err != nil {
 		t.Fatal("CSR loading error:", err)

@@ -9,15 +9,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/helpers"
-	"github.com/cloudflare/cfssl/ubiquity"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/ubiquity"
 )
 
 const (
-	// from https://github.com/cloudflare/cfssl_trust/blob/master/ca-bundle.crt
+	// from https://github.com/khulnasoft-lab/cfssl_trust/blob/master/ca-bundle.crt
 	testCaBundle = "testdata/ca-bundle.pem"
-	// from https://github.com/cloudflare/cfssl_trust/blob/master/int-bundle.crt
+	// from https://github.com/khulnasoft-lab/cfssl_trust/blob/master/int-bundle.crt
 	testIntCaBundle     = "testdata/int-bundle.pem"
 	testNSSRootBundle   = "testdata/nss.pem"
 	testMetadata        = "testdata/ca-bundle.crt.metadata"
@@ -249,7 +249,7 @@ func TestBundleHostnamesMarshalJSON(t *testing.T) {
 
 // Tests on verifying the rebundle flag and error code in Bundle.Status when rebundling.
 func TestRebundleFromPEM(t *testing.T) {
-	t.Skip("expired cert https://github.com/cloudflare/cfssl/issues/1237")
+	t.Skip("expired cert https://github.com/khulnasoft-lab/cfssl/issues/1237")
 	newBundler := newCustomizedBundlerFromFile(t, testCFSSLRootBundle, interL1, "")
 	newBundle, err := newBundler.BundleFromPEMorDER(expiredBundlePEM, nil, Optimal, "")
 	if err != nil {
@@ -872,7 +872,7 @@ func ExpectBundleLength(expectedLen int) func(*testing.T, *Bundle) {
 }
 
 func TestBundlerWithEmptyRootInfo(t *testing.T) {
-	t.Skip("broken relating to https://github.com/cloudflare/cfssl/issues/1230")
+	t.Skip("broken relating to https://github.com/khulnasoft-lab/cfssl/issues/1230")
 	b := newBundlerWithoutRootsAndInters(t)
 
 	// "force" bundle should be ok
@@ -916,7 +916,7 @@ func TestBundlerWithEmptyRootInfo(t *testing.T) {
 }
 
 func TestBundlerClientAuth(t *testing.T) {
-	t.Skip("expired cert https://github.com/cloudflare/cfssl/issues/1237")
+	t.Skip("expired cert https://github.com/khulnasoft-lab/cfssl/issues/1237")
 	b, err := NewBundler("testdata/client-auth/root.pem", "testdata/client-auth/int.pem")
 	if err != nil {
 		t.Fatal(err)

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/scan"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/scan"
 )
 
 // scanHandler is an HTTP handler that accepts GET parameters for host (required)

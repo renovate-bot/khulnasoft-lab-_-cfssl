@@ -4,11 +4,11 @@ package revoke
 import (
 	"errors"
 
-	"github.com/cloudflare/cfssl/certdb/dbconf"
-	"github.com/cloudflare/cfssl/certdb/sql"
-	"github.com/cloudflare/cfssl/cli"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/ocsp"
+	"github.com/khulnasoft-lab/cfssl/certdb/dbconf"
+	"github.com/khulnasoft-lab/cfssl/certdb/sql"
+	"github.com/khulnasoft-lab/cfssl/cli"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/ocsp"
 )
 
 var revokeUsageTxt = `cfssl revoke -- revoke a certificate in the certificate store

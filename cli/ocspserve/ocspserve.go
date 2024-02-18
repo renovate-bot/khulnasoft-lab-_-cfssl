@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/cloudflare/cfssl/cli"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/ocsp"
+	"github.com/khulnasoft-lab/cfssl/cli"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/ocsp"
 )
 
 // Usage text of 'cfssl serve'

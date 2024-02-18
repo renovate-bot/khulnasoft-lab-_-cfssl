@@ -1,7 +1,7 @@
 {
     "hosts": [
-        "cloudflare.com",
-        "www.cloudflare.com"
+        "khulnasoft.com",
+        "www.khulnasoft.com"
     ],
     "key": {
         "algo": "rsa",

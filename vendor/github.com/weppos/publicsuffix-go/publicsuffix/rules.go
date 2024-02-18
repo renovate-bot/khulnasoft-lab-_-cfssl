@@ -7694,7 +7694,7 @@ var r = [9507]Rule{
 	{2, "cloudera.site", 3, true},
 	{1, "cf-ipfs.com", 2, true},
 	{1, "cloudflare-ipfs.com", 2, true},
-	{1, "trycloudflare.com", 2, true},
+	{1, "trykhulnasoft.com", 2, true},
 	{1, "pages.dev", 2, true},
 	{1, "r2.dev", 2, true},
 	{1, "workers.dev", 2, true},

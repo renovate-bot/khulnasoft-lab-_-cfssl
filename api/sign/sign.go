@@ -4,10 +4,10 @@ package sign
 import (
 	"net/http"
 
-	"github.com/cloudflare/cfssl/api/signhandler"
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/signer/universal"
+	"github.com/khulnasoft-lab/cfssl/api/signhandler"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/signer/universal"
 )
 
 // NewHandler generates a new Handler using the certificate

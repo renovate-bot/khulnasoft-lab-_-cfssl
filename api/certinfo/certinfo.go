@@ -5,10 +5,10 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/certdb"
-	"github.com/cloudflare/cfssl/certinfo"
-	"github.com/cloudflare/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/certdb"
+	"github.com/khulnasoft-lab/cfssl/certinfo"
+	"github.com/khulnasoft-lab/cfssl/log"
 )
 
 // Handler accepts requests for either remote or uploaded

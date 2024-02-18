@@ -12,7 +12,7 @@ package core
 import (
 	"time"
 
-	"github.com/cloudflare/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/csr"
 )
 
 // A Root stores information about a trusted root.

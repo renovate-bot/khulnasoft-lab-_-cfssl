@@ -12,14 +12,14 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/bundler"
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/signer"
-	"github.com/cloudflare/cfssl/signer/universal"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/bundler"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/signer"
+	"github.com/khulnasoft-lab/cfssl/signer/universal"
 )
 
 const (

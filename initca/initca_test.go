@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/cloudflare/cfssl/helpers"
-	"github.com/cloudflare/cfssl/signer"
-	"github.com/cloudflare/cfssl/signer/local"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/signer"
+	"github.com/khulnasoft-lab/cfssl/signer/local"
 )
 
 var validKeyParams = []csr.KeyRequest{
@@ -67,8 +67,8 @@ var invalidCryptoParams = []csr.KeyRequest{
 
 func TestInitCA(t *testing.T) {
 	var req *csr.CertificateRequest
-	hostname := "cloudflare.com"
-	crl := "http://crl.cloudflare.com/655c6a9b-01c6-4eea-bf21-be690cc315e0.crl" // cert_uuid.crl
+	hostname := "khulnasoft.com"
+	crl := "http://crl.khulnasoft.com/655c6a9b-01c6-4eea-bf21-be690cc315e0.crl" // cert_uuid.crl
 	for _, param := range validKeyParams {
 		for _, caconfig := range validCAConfigs {
 			req = &csr.CertificateRequest{
@@ -218,7 +218,7 @@ func TestInvalidCAConfig(t *testing.T) {
 }
 func TestInvalidCryptoParams(t *testing.T) {
 	var req *csr.CertificateRequest
-	hostname := "cloudflare.com"
+	hostname := "khulnasoft.com"
 	for _, invalidParam := range invalidCryptoParams {
 		req = &csr.CertificateRequest{
 			Names: []csr.Name{

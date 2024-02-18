@@ -122,7 +122,7 @@
             ]),
             m('ul.nav.navbar-nav.navbar-right', [
               navLink('a', '/packages', Tformat('common.packages')),
-              m('li', m('a[href="https://github.com/cloudflare/cfssl"]', 'GitHub')),
+              m('li', m('a[href="https://github.com/khulnasoft-lab/cfssl"]', 'GitHub')),
             ])
           ])
         ])
@@ -139,7 +139,7 @@
       }, [
         m('p', [
           'Code licensed under ',
-          m('a[href="https://github.com/cloudflare/cfssl/blob/master/LICENSE"]', 'BSD-2-Clause'),
+          m('a[href="https://github.com/khulnasoft-lab/cfssl/blob/master/LICENSE"]', 'BSD-2-Clause'),
           '.'
         ])
       ])
@@ -228,9 +228,9 @@
       return appWrapper([
         m('h1.page-header', 'CFSSL: Cloudflare\'s PKI toolkit'), m('p', [
           'See ',
-          m('a[href="https://blog.cloudflare.com/introducing-cfssl"]', 'blog post'),
+          m('a[href="https://blog.khulnasoft.com/introducing-cfssl"]', 'blog post'),
           ' or ',
-          m('a[href="https://github.com/cloudflare/cfssl"]', 'contribute on GitHub'),
+          m('a[href="https://github.com/khulnasoft-lab/cfssl"]', 'contribute on GitHub'),
           '.'
         ])
       ]);
@@ -246,9 +246,9 @@
       return appWrapper([
         m('h1.page-header', Tformat('common.packages')),
         m('ul', [
-          m('li', m('a[href="https://github.com/cloudflare/cfssl/releases"]', 'Download binaries (GitHub)')),
-          m('li', m('a[href="https://hub.docker.com/r/cloudflare/cfssl"]', 'Docker images')),
-          m('li', m('a[href="https://pkg.cloudflare.com/"]', 'Install from apt or yum'))
+          m('li', m('a[href="https://github.com/khulnasoft-lab/cfssl/releases"]', 'Download binaries (GitHub)')),
+          m('li', m('a[href="https://hub.docker.com/r/khulnasoft-lab/cfssl"]', 'Docker images')),
+          m('li', m('a[href="https://pkg.khulnasoft.com/"]', 'Install from apt or yum'))
         ])
       ]);
     }

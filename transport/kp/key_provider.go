@@ -27,10 +27,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/cloudflare/cfssl/helpers"
-	"github.com/cloudflare/cfssl/helpers/derhelpers"
-	"github.com/cloudflare/cfssl/transport/core"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/helpers/derhelpers"
+	"github.com/khulnasoft-lab/cfssl/transport/core"
 )
 
 const (

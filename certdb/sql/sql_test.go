@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/certdb"
-	"github.com/cloudflare/cfssl/certdb/testdb"
+	"github.com/khulnasoft-lab/cfssl/certdb"
+	"github.com/khulnasoft-lab/cfssl/certdb/testdb"
 
 	"github.com/jmoiron/sqlx"
 )

@@ -1,8 +1,8 @@
 {
     "CN": "CloudFlare server",
     "hosts": [
-        "cloudflare.com",
-        "www.cloudflare.com",
+        "khulnasoft.com",
+        "www.khulnasoft.com",
         "127.0.0.1"
     ],
     "key": {

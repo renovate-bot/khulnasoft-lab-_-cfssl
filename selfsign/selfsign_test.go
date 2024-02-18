@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/helpers"
 )
 
 const (
@@ -46,7 +46,7 @@ func TestDefaultSign(t *testing.T) {
 }
 
 func TestSANs(t *testing.T) {
-	t.Skip("broken relating to https://github.com/cloudflare/cfssl/issues/1230")
+	t.Skip("broken relating to https://github.com/khulnasoft-lab/cfssl/issues/1230")
 	csrBytes, err := os.ReadFile(csr2File)
 	if err != nil {
 		t.Fatal(err)
@@ -85,7 +85,7 @@ func TestSANs(t *testing.T) {
 		t.Errorf("cert should have contained EmailAddresses %#v but had %#v", expectedEmailAddresses, cert.EmailAddresses)
 	}
 
-	expectedDNSNames := []string{"cloudflare.com", "www.cloudflare.com"}
+	expectedDNSNames := []string{"khulnasoft.com", "www.khulnasoft.com"}
 	if !reflect.DeepEqual(cert.DNSNames, expectedDNSNames) {
 		t.Errorf("cert should have contained DNSNames %#v but had %#v", expectedDNSNames, cert.DNSNames)
 	}
@@ -95,7 +95,7 @@ func TestSANs(t *testing.T) {
 		t.Errorf("cert should have contained IPAddresses %#v but had %#v", expectedIPAddresses, cert.IPAddresses)
 	}
 
-	expectedURIs := []*url.URL{{Scheme: "https", Host: "www.cloudflare.com"}}
+	expectedURIs := []*url.URL{{Scheme: "https", Host: "www.khulnasoft.com"}}
 	if !reflect.DeepEqual(cert.URIs, expectedURIs) {
 		t.Errorf("cert should have contained URIs %#v but had %#v", expectedURIs, cert.URIs)
 	}

@@ -21,4 +21,4 @@ script:
 notifications:
   email:
     recipients:
-    - kyle@cloudflare.com
+    - kyle@khulnasoft.com

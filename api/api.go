@@ -6,8 +6,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/log"
 )
 
 // Handler is an interface providing a generic mechanism for handling HTTP requests.

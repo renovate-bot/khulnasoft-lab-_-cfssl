@@ -6,13 +6,13 @@ import (
 	"errors"
 	"os"
 
-	"github.com/cloudflare/cfssl/certdb/dbconf"
-	certsql "github.com/cloudflare/cfssl/certdb/sql"
-	"github.com/cloudflare/cfssl/cli"
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/signer"
-	"github.com/cloudflare/cfssl/signer/universal"
+	"github.com/khulnasoft-lab/cfssl/certdb/dbconf"
+	certsql "github.com/khulnasoft-lab/cfssl/certdb/sql"
+	"github.com/khulnasoft-lab/cfssl/cli"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/signer"
+	"github.com/khulnasoft-lab/cfssl/signer/universal"
 
 	"github.com/jmoiron/sqlx"
 )

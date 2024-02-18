@@ -1,8 +1,8 @@
 # CFSSL
 
-[![Build Status](https://travis-ci.org/cloudflare/cfssl.svg?branch=master)](https://travis-ci.org/cloudflare/cfssl)
-[![Coverage Status](http://codecov.io/github/cloudflare/cfssl/coverage.svg?branch=master)](http://codecov.io/github/cloudflare/cfssl?branch=master)
-[![GoDoc](https://godoc.org/github.com/cloudflare/cfssl?status.svg)](https://godoc.org/github.com/cloudflare/cfssl)
+[![Build Status](https://travis-ci.org/khulnasoft-lab/cfssl.svg?branch=master)](https://travis-ci.org/khulnasoft-lab/cfssl)
+[![Coverage Status](http://codecov.io/github/khulnasoft-lab/cfssl/coverage.svg?branch=master)](http://codecov.io/github/khulnasoft-lab/cfssl?branch=master)
+[![GoDoc](https://godoc.org/github.com/khulnasoft-lab/cfssl?status.svg)](https://godoc.org/github.com/khulnasoft-lab/cfssl)
 
 ## CloudFlare's PKI/TLS toolkit
 
@@ -33,7 +33,7 @@ Building cfssl requires a
 [working Go 1.16+ installation](http://golang.org/doc/install).
 
 ```
-$ git clone git@github.com:cloudflare/cfssl.git
+$ git clone git@github.com:khulnasoft-lab/cfssl.git
 $ cd cfssl
 $ make
 ```
@@ -61,10 +61,10 @@ You can set the `GOOS` and `GOARCH` environment variables to have Go cross compi
 ### Installation
 
 Installation requires a [working Go 1.16+ installation](http://golang.org/doc/install).
-Alternatively, [prebuilt binaries are available](https://github.com/cloudflare/cfssl/releases)
+Alternatively, [prebuilt binaries are available](https://github.com/khulnasoft-lab/cfssl/releases)
 
 ```
-$ go get github.com/cloudflare/cfssl/cmd/cfssl
+$ go get github.com/khulnasoft-lab/cfssl/cmd/cfssl
 ```
 
 will download, build, and install the CFSSL tool.
@@ -73,7 +73,7 @@ To install any of the other utility programs that are
 in this repo (for instance `cfssljson` in this case):
 
 ```
-$ go get github.com/cloudflare/cfssl/cmd/cfssljson
+$ go get github.com/khulnasoft-lab/cfssl/cmd/cfssljson
 ```
 
 This will download, build, and install the CFSSLJSON tool.
@@ -81,13 +81,13 @@ This will download, build, and install the CFSSLJSON tool.
 And to simply install __all__ of the programs in this repo:
 
 ```
-$ go get github.com/cloudflare/cfssl/cmd/...
+$ go get github.com/khulnasoft-lab/cfssl/cmd/...
 ```
 
 if you are above go 1.18:
 
 ```
-$ go install github.com/cloudflare/cfssl/cmd/...@latest
+$ go install github.com/khulnasoft-lab/cfssl/cmd/...@latest
 ```
 
 This will download, build, and install all of the utility programs
@@ -124,12 +124,12 @@ IP address in the certificate SAN extension.
 For example, assuming the CA's private key is in
 `/etc/ssl/private/cfssl_key.pem` and the CA's certificate is in
 `/etc/ssl/certs/cfssl.pem`, to sign the `cloudflare.pem` certificate
-for cloudflare.com:
+for khulnasoft.com:
 
 ```
 cfssl sign -ca     /etc/ssl/certs/cfssl.pem       \
            -ca-key /etc/ssl/private/cfssl_key.pem \
-           -hostname cloudflare.com               \
+           -hostname khulnasoft.com               \
            ./cloudflare.pem
 ```
 
@@ -171,7 +171,7 @@ pools. In addition, platform metadata is specified through `-metadata`.
 The bundle files, metadata file (and auxiliary files) can be
 found at:
 
-        https://github.com/cloudflare/cfssl_trust
+        https://github.com/khulnasoft-lab/cfssl_trust
 
 Specify PEM-encoded client certificate and key through `-cert` and
 `-key` respectively. If key is specified, the bundle will be built
@@ -359,7 +359,7 @@ for configuring and running the CA.
 verifying certificates. It can be installed with
 
 ```
-go get github.com/cloudflare/cfssl/cmd/mkbundle
+go get github.com/khulnasoft-lab/cfssl/cmd/mkbundle
 ```
 
 It takes a collection of certificates, checks for CRL revocation (OCSP

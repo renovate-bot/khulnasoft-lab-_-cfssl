@@ -7,10 +7,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cloudflare/cfssl/certdb/dbconf"
-	"github.com/cloudflare/cfssl/certdb/sql"
-	"github.com/cloudflare/cfssl/certinfo"
-	"github.com/cloudflare/cfssl/cli"
+	"github.com/khulnasoft-lab/cfssl/certdb/dbconf"
+	"github.com/khulnasoft-lab/cfssl/certdb/sql"
+	"github.com/khulnasoft-lab/cfssl/certinfo"
+	"github.com/khulnasoft-lab/cfssl/cli"
 	"github.com/jmoiron/sqlx"
 )
 

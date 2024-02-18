@@ -6,11 +6,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/initca"
-	"github.com/cloudflare/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/initca"
+	"github.com/khulnasoft-lab/cfssl/log"
 )
 
 // A NewCA contains a private key and certificate suitable for serving

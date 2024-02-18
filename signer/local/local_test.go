@@ -25,12 +25,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/csr"
-	cferr "github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/helpers"
-	"github.com/cloudflare/cfssl/log"
-	"github.com/cloudflare/cfssl/signer"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	cferr "github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/log"
+	"github.com/khulnasoft-lab/cfssl/signer"
 	ct "github.com/google/certificate-transparency-go"
 	"github.com/zmap/zlint/v3/lint"
 )
@@ -373,7 +373,7 @@ var csrTests = []csrTest{
 
 func TestSignCSRs(t *testing.T) {
 	s := newTestSigner(t)
-	hostname := "cloudflare.com"
+	hostname := "khulnasoft.com"
 	for _, test := range csrTests {
 		csr, err := os.ReadFile(test.file)
 		if err != nil {
@@ -401,7 +401,7 @@ func TestSignCSRs(t *testing.T) {
 
 func TestECDSASigner(t *testing.T) {
 	s := newCustomSigner(t, testECDSACaFile, testECDSACaKeyFile)
-	hostname := "cloudflare.com"
+	hostname := "khulnasoft.com"
 	for _, test := range csrTests {
 		csr, err := os.ReadFile(test.file)
 		if err != nil {
@@ -584,7 +584,7 @@ func TestOverrideSubject(t *testing.T) {
 	s := newCustomSigner(t, testECDSACaFile, testECDSACaKeyFile)
 
 	request := signer.SignRequest{
-		Hosts:   []string{"127.0.0.1", "localhost", "xyz@example.com", "https://www.cloudflare.com"},
+		Hosts:   []string{"127.0.0.1", "localhost", "xyz@example.com", "https://www.khulnasoft.com"},
 		Request: string(csrPEM),
 		Subject: req,
 	}
@@ -656,7 +656,7 @@ func TestOverwriteHosts(t *testing.T) {
 		for _, hosts := range [][]string{
 			nil,
 			{},
-			{"127.0.0.1", "localhost", "xyz@example.com", "https://www.cloudflare.com"},
+			{"127.0.0.1", "localhost", "xyz@example.com", "https://www.khulnasoft.com"},
 		} {
 			request := signer.SignRequest{
 				Hosts:   hosts,
@@ -1394,7 +1394,7 @@ func TestSignFromPrecert(t *testing.T) {
 		t.Fatalf("Failed to generate test key: %s", err)
 	}
 
-	_uri, _ := url.Parse("https://www.cloudflare.com")
+	_uri, _ := url.Parse("https://www.khulnasoft.com")
 
 	precertBytes, err := testSigner.sign(&x509.Certificate{
 		SignatureAlgorithm: x509.SHA512WithRSA,

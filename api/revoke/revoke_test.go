@@ -16,11 +16,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/certdb"
-	"github.com/cloudflare/cfssl/certdb/sql"
-	"github.com/cloudflare/cfssl/certdb/testdb"
-	"github.com/cloudflare/cfssl/ocsp"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/certdb"
+	"github.com/khulnasoft-lab/cfssl/certdb/sql"
+	"github.com/khulnasoft-lab/cfssl/certdb/testdb"
+	"github.com/khulnasoft-lab/cfssl/ocsp"
 
 	stdocsp "golang.org/x/crypto/ocsp"
 )

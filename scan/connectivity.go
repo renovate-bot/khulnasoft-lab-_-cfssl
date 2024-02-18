@@ -7,7 +7,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/cloudflare/cfssl/scan/crypto/tls"
+	"github.com/khulnasoft-lab/cfssl/scan/crypto/tls"
 )
 
 // Connectivity contains scanners testing basic connectivity to the host
@@ -65,14 +65,14 @@ func initOnCloudFlareScan() ([]*net.IPNet, error) {
 	}
 
 	// Download CloudFlare CIDR ranges and parse them.
-	v4resp, err := Client.Get("https://www.cloudflare.com/ips-v4")
+	v4resp, err := Client.Get("https://www.khulnasoft.com/ips-v4")
 	if err != nil {
 		cfNetsErr = fmt.Errorf("Couldn't download CloudFlare IPs: %v", err)
 		return nil, cfNetsErr
 	}
 	defer v4resp.Body.Close()
 
-	v6resp, err := Client.Get("https://www.cloudflare.com/ips-v6")
+	v6resp, err := Client.Get("https://www.khulnasoft.com/ips-v6")
 	if err != nil {
 		cfNetsErr = fmt.Errorf("Couldn't download CloudFlare IPs: %v", err)
 		return nil, cfNetsErr

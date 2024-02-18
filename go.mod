@@ -1,4 +1,4 @@
-module github.com/cloudflare/cfssl
+module github.com/khulnasoft-lab/cfssl
 
 go 1.18
 

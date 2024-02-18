@@ -13,8 +13,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cloudflare/cfssl/errors"
-	"github.com/cloudflare/cfssl/helpers"
+	"github.com/khulnasoft-lab/cfssl/errors"
+	"github.com/khulnasoft-lab/cfssl/helpers"
 )
 
 // TestNew validate the CertificateRequest created to return with a KeyRequest
@@ -71,7 +71,7 @@ func TestPKIXName(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com"},
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com"},
 		KeyRequest: NewKeyRequest(),
 	}
 
@@ -115,7 +115,7 @@ func TestParseRequest(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1", "jdoe@example.com", "https://www.cloudflare.com"},
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: NewKeyRequest(),
 		Extensions: []pkix.Extension{
 			{
@@ -400,8 +400,8 @@ func TestDefaultKeyRequest(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:    "cloudflare.com",
-		Hosts: []string{"cloudflare.com", "www.cloudflare.com", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:    "khulnasoft.com",
+		Hosts: []string{"khulnasoft.com", "www.khulnasoft.com", "jdoe@example.com", "https://www.khulnasoft.com"},
 	}
 	_, priv, err := ParseRequest(req)
 	if err != nil {
@@ -444,8 +444,8 @@ func TestRSACertRequest(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"rsa", 2048},
 	}
 	_, _, err := ParseRequest(req)
@@ -467,8 +467,8 @@ func TestED25519CertRequest(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{A: "ed25519"},
 	}
 	_, _, err := ParseRequest(req)
@@ -489,8 +489,8 @@ func TestBadCertRequest(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"yolo-crypto", 2048},
 	}
 	_, _, err := ParseRequest(req)
@@ -524,8 +524,8 @@ func TestGenerator(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"rsa", 2048},
 	}
 
@@ -581,7 +581,7 @@ func TestBadGenerator(t *testing.T) {
 			},
 		},
 		// Missing CN
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com"},
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"rsa", 2048},
 	}
 
@@ -602,8 +602,8 @@ func TestWeakCSR(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"rsa", 1024},
 	}
 	g := &Generator{testValidator}
@@ -663,8 +663,8 @@ func TestGenerate(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"ecdsa", 256},
 	}
 
@@ -716,8 +716,8 @@ func TestGenerateASN1(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1", "jdoe@example.com", "https://www.cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1", "jdoe@example.com", "https://www.khulnasoft.com"},
 		KeyRequest: &KeyRequest{"ecdsa", 256},
 	}
 
@@ -771,8 +771,8 @@ func TestReGenerate(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1"},
 		KeyRequest: &KeyRequest{"ecdsa", 256},
 	}
 
@@ -814,8 +814,8 @@ func TestBadReGenerate(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com", "www.cloudflare.com", "192.168.0.1"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com", "www.khulnasoft.com", "192.168.0.1"},
 		KeyRequest: &KeyRequest{"ecdsa", 256},
 	}
 
@@ -906,7 +906,7 @@ func TestDelegationCSR(t *testing.T) {
 			},
 		},
 		DelegationEnabled: true,
-		Hosts:             []string{"cloudflare.com", "www.cloudflare.com"},
+		Hosts:             []string{"khulnasoft.com", "www.khulnasoft.com"},
 		KeyRequest:        NewKeyRequest(),
 	}
 	csr, _, err := ParseRequest(cr)

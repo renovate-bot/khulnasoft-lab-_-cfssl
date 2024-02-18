@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudflare/cfssl/api"
-	"github.com/cloudflare/cfssl/config"
-	"github.com/cloudflare/cfssl/csr"
-	"github.com/cloudflare/cfssl/signer/local"
+	"github.com/khulnasoft-lab/cfssl/api"
+	"github.com/khulnasoft-lab/cfssl/config"
+	"github.com/khulnasoft-lab/cfssl/csr"
+	"github.com/khulnasoft-lab/cfssl/signer/local"
 )
 
 const (
@@ -32,8 +32,8 @@ func csrData(t *testing.T) *bytes.Reader {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
-		Hosts:      []string{"cloudflare.com"},
+		CN:         "khulnasoft.com",
+		Hosts:      []string{"khulnasoft.com"},
 		KeyRequest: csr.NewKeyRequest(),
 	}
 	csrBytes, err := json.Marshal(req)
@@ -88,7 +88,7 @@ func TestCSRValidate(t *testing.T) {
 				OU: "Systems Engineering",
 			},
 		},
-		CN:         "cloudflare.com",
+		CN:         "khulnasoft.com",
 		Hosts:      []string{},
 		KeyRequest: csr.NewKeyRequest(),
 	}
