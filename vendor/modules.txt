@@ -57,7 +57,7 @@ github.com/jmhodges/clock
 github.com/jmoiron/sqlx
 github.com/jmoiron/sqlx/reflectx
 github.com/jmoiron/sqlx/types
-# github.com/kisielk/sqlstruct v0.0.0-20201105191214-5f3e10d3ab46
+# github.com/kisielk/sqlstruct v0.0.0-20210630145711-dae28ed37023
 ## explicit
 github.com/kisielk/sqlstruct
 # github.com/kylelemons/go-gypsy v1.0.0

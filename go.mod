@@ -10,7 +10,7 @@ require (
 	github.com/google/certificate-transparency-go v1.1.7
 	github.com/jmhodges/clock v1.2.0
 	github.com/jmoiron/sqlx v1.3.5
-	github.com/kisielk/sqlstruct v0.0.0-20201105191214-5f3e10d3ab46
+	github.com/kisielk/sqlstruct v0.0.0-20210630145711-dae28ed37023
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/prometheus/client_golang v1.18.0
