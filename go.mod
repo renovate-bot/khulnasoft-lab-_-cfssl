@@ -5,7 +5,7 @@ go 1.18
 require (
 	bitbucket.org/liamstask/goose v0.0.0-20150115234039-8488cc47d90c
 	github.com/cloudflare/backoff v0.0.0-20161212185259-647f3cdfc87a
-	github.com/cloudflare/redoctober v0.0.0-20231030153235-deb1d5563cfb
+	github.com/cloudflare/redoctober v0.0.0-20241112165158-ce2ad370627b
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/google/certificate-transparency-go v1.1.7
 	github.com/jmhodges/clock v1.2.0

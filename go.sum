@@ -67,6 +67,8 @@ github.com/cloudflare/redoctober v0.0.0-20211013234631-6a74ccc611f6 h1:QKzett0dn
 github.com/cloudflare/redoctober v0.0.0-20211013234631-6a74ccc611f6/go.mod h1:Ikt4Wfpln1YOrak+auA8BNxgiilj0Y2y7nO+aN2eMzk=
 github.com/cloudflare/redoctober v0.0.0-20231030153235-deb1d5563cfb h1:EtAOJrxYvq5ZzJCNOq5KFRUeZQOJfJiXQj2Iw1Pnuog=
 github.com/cloudflare/redoctober v0.0.0-20231030153235-deb1d5563cfb/go.mod h1:Ikt4Wfpln1YOrak+auA8BNxgiilj0Y2y7nO+aN2eMzk=
+github.com/cloudflare/redoctober v0.0.0-20241112165158-ce2ad370627b h1:+IqS1XlF5ISuVh1E/XbPgJ2Io4U5X5kVOqAazL+t13c=
+github.com/cloudflare/redoctober v0.0.0-20241112165158-ce2ad370627b/go.mod h1:Ikt4Wfpln1YOrak+auA8BNxgiilj0Y2y7nO+aN2eMzk=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0/go.mod h1:4Zcjuz89kmFXt9morQgcfYZAYZ5n8WHjt81YYWIwtTM=
 github.com/coreos/etcd v3.3.10+incompatible/go.mod h1:uF7uidLiAD3TWHmW31ZFd/JWoc32PjwdhPthX9715RE=

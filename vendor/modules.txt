@@ -11,7 +11,7 @@ github.com/cespare/xxhash/v2
 # github.com/cloudflare/backoff v0.0.0-20161212185259-647f3cdfc87a
 ## explicit
 github.com/cloudflare/backoff
-# github.com/cloudflare/redoctober v0.0.0-20231030153235-deb1d5563cfb
+# github.com/cloudflare/redoctober v0.0.0-20241112165158-ce2ad370627b
 ## explicit; go 1.16
 github.com/cloudflare/redoctober/client
 github.com/cloudflare/redoctober/config
