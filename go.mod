@@ -1,6 +1,6 @@
 module github.com/khulnasoft-lab/cfssl
 
-go 1.18
+go 1.23.0
 
 require (
 	bitbucket.org/liamstask/goose v0.0.0-20150115234039-8488cc47d90c
@@ -14,9 +14,9 @@ require (
 	github.com/lib/pq v1.10.9
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/prometheus/client_golang v1.19.0
-	github.com/zmap/zcrypto v0.0.0-20230310154051-c8b263fd8300
+	github.com/zmap/zcrypto v0.0.0-20250830192831-dcac38cad4c0
 	github.com/zmap/zlint/v3 v3.6.1
-	golang.org/x/crypto v0.31.0
+	golang.org/x/crypto v0.41.0
 )
 
 require (
@@ -30,12 +30,12 @@ require (
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.48.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
-	github.com/stretchr/testify v1.8.4 // indirect
-	github.com/weppos/publicsuffix-go v0.30.0 // indirect
+	github.com/stretchr/testify v1.10.0 // indirect
+	github.com/weppos/publicsuffix-go v0.50.1-0.20250829105427-5340293a34a1 // indirect
 	github.com/ziutek/mymysql v1.5.4 // indirect
-	golang.org/x/net v0.21.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
-	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/net v0.43.0 // indirect
+	golang.org/x/sys v0.35.0 // indirect
+	golang.org/x/text v0.28.0 // indirect
 	google.golang.org/protobuf v1.32.0 // indirect
 	k8s.io/klog/v2 v2.100.1 // indirect
 )
